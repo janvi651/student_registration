@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Registration Page</h1>
+
+        <div class="form-box">
+            <h2 id="formTitle">Register Student</h2>
+
+            <form id="studentForm" novalidate>
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Enter name">
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Enter email">
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Age</label>
+                        <input type="number" id="age" placeholder="Enter age">
+                        <span class="error" id="ageError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Gender</label>
+                        <select id="gender">
+                            <option value="">Select Gender</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                            <option>Other</option>
+                        </select>
+                        <span class="error" id="genderError"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Course</label>
+                        <select id="course">
+                            <option value="">Select Course</option>
+                            <option>BCA</option>
+                            <option>BBA</option>
+                            <option>B.Tech</option>
+                            <option>MCA</option>
+                            <option>MBA</option>
+                        </select>
+                        <span class="error" id="courseError"></span>
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" id="submitBtn">Add Student</button>
+                    <button type="reset" id="resetBtn">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="table-box">
+            <h2>Registered Students</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Course</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
